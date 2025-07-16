@@ -5,15 +5,12 @@ This is a simple task manager application built with JavaScript and Express. It 
 ## Project Structure
 
 ```
-task-manager
-├── src
-│   ├── app.js
-│   ├── controllers
-│   │   └── tasksController.js
-│   ├── routes
-│   │   └── tasksRoutes.js
-│   └── models
-│       └── task.js
+task-manager/
+├── public/
+│ ├── index.html # Frontend UI
+│ └── style.css # Styling for task display
+├── server.js # Express backend
+├── taskData.js # Dummy task data used by backend
 ├── package.json
 └── README.md
 ```
@@ -54,6 +51,13 @@ task-manager
 - `GET /tasks` - Retrieve all tasks
 - `PUT /tasks/:id` - Update a task by ID
 - `DELETE /tasks/:id` - Delete a task by ID
+
+## 🔌 API Endpoints
+```
+GET /tasks → Returns high-priority, incomplete tasks
+
+GET /log-tasks → Logs tasks one-by-one on terminal with delay
+```
 
 ## Contributing
 

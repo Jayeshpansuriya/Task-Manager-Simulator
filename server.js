@@ -21,7 +21,9 @@ app.get('/tasks',(req,res)=>{
     res.json(filtered);
 });
 
-function logTasksWithDelay(task,callback){
+
+
+function logTasksWithDelay(tasks,callback){
     tasks.forEach((task,index)=>{
         setTimeout(()=>{
 
@@ -34,6 +36,8 @@ function logTasksWithDelay(task,callback){
     });
 }
 
+
+
 app.get("/log-tasks",async(req,res)=>{
     const filtered=tasks.filter(task=>task.priority==='high' && !task.completed)
     .map(task=>({
@@ -45,6 +49,7 @@ app.get("/log-tasks",async(req,res)=>{
     });
     res.send("⏳ Logging started on server console… Check terminal.")
 })
+
 
 
 
