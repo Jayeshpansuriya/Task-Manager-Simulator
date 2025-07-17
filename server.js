@@ -21,7 +21,7 @@ app.get('/tasks',(req,res)=>{
     res.json(filtered);
 });
 
-
+export const add =(a,b)=> a+b;
 
 function logTasksWithDelay(tasks,callback){
     tasks.forEach((task,index)=>{
@@ -49,13 +49,6 @@ app.get("/log-tasks",async(req,res)=>{
     });
     res.send("⏳ Logging started on server console… Check terminal.")
 })
-
-
-
-
-
-
-
 
 app.listen(PORT,()=>{
     console.log(`🚀 Server running at http://localhost:${PORT}`)
